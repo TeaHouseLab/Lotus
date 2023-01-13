@@ -42,7 +42,7 @@ jobs:
       env:
         FISH_NCURSES_ROOT: /ncurses-prefix/usr
         LC_CTYPE: en_US.UTF-8
-      run: 'cd fish-shell && ./build_tools/tar_with_dependence.sh'
+      run: 'cd fish-shell && chmod +x ./build_tools/tar_with_dependence.sh && ./build_tools/tar_with_dependence.sh'
     - name: Get current date
       id: date
       run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
