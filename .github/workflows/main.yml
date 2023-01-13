@@ -39,7 +39,6 @@ jobs:
       run: 'curl -sL "https://github.com/TeaHouseLab/Lotus/blob/main/tar_with_dependence.sh?raw=true" >build_tools/tar_with_dependence.sh'
     - name: Start building
       shell: 'scl enable devtoolset-11 rh-git227 "bash {0}"'
-      run: 'scl enable devtoolset-11 rh-git227 "bash {0}"'
       env:
         FISH_NCURSES_ROOT: /ncurses-prefix/usr
         LC_CTYPE: en_US.UTF-8
