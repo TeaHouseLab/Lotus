@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#enable static links
+#I don't know what i'm doing since i only want fish to be built
+curl -sL "https://github.com/TeaHouseLab/Lotus/blob/main/static.patch?raw=true" >static.patch
+patch -p1 -i static.patch
+
 set -e
 
 ROOT_DIR="$(git rev-parse --show-toplevel)"
