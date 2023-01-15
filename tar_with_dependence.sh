@@ -44,6 +44,3 @@ exec "$(dirname "$(readlink  -f "${0}")")/usr/bin/fish" ${@+"$@"}
 EOF
 chmod 755 "$APP_DIR/lotus"
 tar zcvf package.tar.gz "$APP_DIR"
-
-pwd
-ls
