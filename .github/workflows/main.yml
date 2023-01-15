@@ -37,7 +37,7 @@ jobs:
     - name: Inject building script
       shell: 'scl enable devtoolset-11 rh-git227 "bash {0}"'
       run: 'cd fish-shell && curl -sL "https://github.com/TeaHouseLab/Lotus/blob/main/tar_with_dependence.sh?raw=true" >build_tools/tar_with_dependence.sh'
-    - name: Start building
+    - name: Building
       shell: 'scl enable devtoolset-11 rh-git227 "bash {0}"'
       env:
         FISH_NCURSES_ROOT: /ncurses-prefix/usr
@@ -45,5 +45,5 @@ jobs:
       run: 'cd fish-shell && chmod +x ./build_tools/tar_with_dependence.sh && ./build_tools/tar_with_dependence.sh'
     - uses: actions/upload-artifact@v3
       with:
-        path: 'fish-shell/*.tar.gz'
+        path: 'fish-shell/lotus.tar.gz'
         retention-days: 1

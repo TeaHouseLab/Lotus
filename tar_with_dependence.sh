@@ -43,4 +43,6 @@ export TERMINFO_DIRS="$package/usr/share/terminfo:$TERMINFO_DIRS"
 exec "$(dirname "$(readlink  -f "${0}")")/usr/bin/fish" ${@+"$@"}
 EOF
 chmod 755 "$APP_DIR/lotus"
-tar zcvf package.tar.gz "$APP_DIR"
+mkdir lotus
+mv $APP_DIR/* lotus/
+tar zcvf lotus.tar.gz lotus
