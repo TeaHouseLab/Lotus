@@ -43,8 +43,7 @@ jobs:
         FISH_NCURSES_ROOT: /ncurses-prefix/usr
         LC_CTYPE: en_US.UTF-8
       run: 'cd fish-shell && chmod +x ./build_tools/tar_with_dependence.sh && ./build_tools/tar_with_dependence.sh'
-    - run: 'pwd && ls'
     - uses: actions/upload-artifact@v3
       with:
-        path: '*.tar.gz'
+        path: 'fish-shell/*.tar.gz'
         retention-days: 1
