@@ -52,5 +52,5 @@ jobs:
           RELEASE_NAME: release-${{ steps.date.outputs.date }}
       with:
         name: Lotus
-        path: '*.tar.gz'
+        path: 'package.tar.gz'
         retention-days: 1
