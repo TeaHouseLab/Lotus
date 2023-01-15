@@ -1,5 +1,4 @@
 # Lotus
-lotus is a fast fish shell interpreter, based on fish shell
 
 Bascially it's a fish shell but static version, to solve the problem when you running scripts in a older fish shell environment.
 
