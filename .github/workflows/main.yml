@@ -44,7 +44,7 @@ jobs:
         LC_CTYPE: en_US.UTF-8
       run: 'cd fish-shell && chmod +x ./build_tools/tar_with_dependence.sh && ./build_tools/tar_with_dependence.sh'
     - uses: actions/upload-artifact@v3
+      run: 'pwd && ls'
       with:
-        name: lotus
         path: '*.tar.gz'
         retention-days: 1
